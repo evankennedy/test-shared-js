@@ -15,3 +15,5 @@ All packages are held within the `packages` directory. Within there, each packag
 ## Caveats
 
 Currently, we need to have a `subpackage/package.json` directory. Once Typescript supports the `exports` property of the `package.json`, we will be able to omit this and the `postBuild` script that creates them.
+
+Some stuff!
