@@ -1,0 +1,1 @@
+{"version":3,"file":"package1Function.d.ts","sourceRoot":"","sources":["../../src/core/package1Function.ts"],"names":[],"mappings":"AAAA,UAAU,qBAAqB;IAC9B,KAAK,EAAE,MAAM,CAAC;CACd;AAED,UAAU,gBAAgB;IACzB,CAAC,KAAK,EAAE,qBAAqB,GAAG,UAAU,qBAAqB,CAAC,OAAO,CAAC,EAAE,CAAC;CAC3E;AAED,gCAAgC;AAChC,QAAA,MAAM,gBAAgB,EAAE,gBACG,CAAC;AAE5B,OAAO,EAAE,gBAAgB,EAAE,CAAC"}

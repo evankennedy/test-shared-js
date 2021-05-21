@@ -1,0 +1,1 @@
+{"version":3,"file":"Package1Component.d.ts","sourceRoot":"","sources":["../../../../src/ui/components/Package1Component/Package1Component.tsx"],"names":[],"mappings":";AAEA,UAAU,sBAAsB;IAC/B,KAAK,EAAE,MAAM,CAAC;CACd;AAED,UAAU,iBAAiB;IAC1B,CAAC,KAAK,EAAE,sBAAsB,GAAG,GAAG,CAAC,OAAO,CAAC;CAC7C;AAED,iCAAiC;AACjC,QAAA,MAAM,iBAAiB,EAAE,iBAAsD,CAAC;AAEhF,OAAO,EAAE,iBAAiB,EAAE,CAAC"}

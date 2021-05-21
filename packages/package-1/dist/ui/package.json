@@ -1,0 +1,6 @@
+{
+	"name": "@evankennedy/test-shared-js_package-1/ui",
+	"main": "./index.js",
+	"types": "./index.js",
+	"sideEffects": false
+}
