@@ -1,0 +1,32 @@
+{
+	"private": "true",
+	"name": "@evankennedy/test-shared-js_package-1",
+	"version": "1.0.0",
+	"license": "ISC",
+	"author": "Evan Kennedy (evan_kennedy@yahoo.com)",
+	"sideEffects": false,
+	"main": "./index.js",
+	"types": "./index.d.ts",
+	"scripts": {
+		"build": "webpack",
+		"postbuild": "node ../../scripts/postBuild ui"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.6",
+		"@types/webpack": "^5.28.0",
+		"react": "*",
+		"ts-loader": "^9.2.1",
+		"tsconfig-paths": "^3.9.0",
+		"typescript": "^4.2.4",
+		"webpack": "^5.37.1",
+		"webpack-cli": "^4.7.0"
+	},
+	"peerDependencies": {
+		"react": "^16.8 || ^17"
+	},
+	"peerDependenciesMeta": {
+		"react": {
+			"optional": true
+		}
+	}
+}
