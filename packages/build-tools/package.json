@@ -1,0 +1,34 @@
+{
+	"private": "true",
+	"name": "@evankennedy/test-shared-js_build-tools",
+	"version": "1.0.0",
+	"license": "ISC",
+	"author": "Evan Kennedy (evan_kennedy@yahoo.com)",
+	"sideEffects": false,
+	"main": "./index.js",
+	"types": "./index.d.ts",
+	"exports": {
+		".": "./index.js",
+		"./webpack": "./webpack/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/evankennedy/test-shared-js.git"
+	},
+	"bugs": {
+		"url": "https://github.com/evankennedy/test-shared-js/issues"
+	},
+	"homepage": "https://github.com/evankennedy/test-shared-js#readme",
+	"scripts": {
+		"build": "webpack --mode=production",
+		"watch": "webpack --mode=development --watch"
+	},
+	"devDependencies": {
+		"@types/webpack": "^5.28.0",
+		"ts-loader": "^9.2.2",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4",
+		"webpack": "^5.37.1",
+		"webpack-cli": "^4.7.0"
+	}
+}
