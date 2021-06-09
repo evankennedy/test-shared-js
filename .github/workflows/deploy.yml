@@ -23,6 +23,8 @@ jobs:
 
       - name: Install
         run: for package in ${{ env.modified_packages }}; do (cd "packages/$package" && npm install); done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build 1
         run: for package in ${{ env.modified_packages }}; do (cd "packages/$package" && npm run build); done
