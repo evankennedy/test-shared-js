@@ -10,10 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
 
       - name: Detect Modified Packages
         run: |
-          echo "MODIFIED_PACKAGES=$(git diff --name-only HEAD^ HEAD | grep -oP '(?<=packages/)[^/]+')" | uniq >> $GITHUB_ENV
+          echo "MODIFIED_PACKAGES=$(git diff --name-only HEAD^ HEAD | grep -oP '(?<=packages/)[^/]+' | uniq)" >> $GITHUB_ENV
 
       - name: Install
         run: for package in $MODIFIED_PACKAGES; do (cd "packages/$package" && npm install); done
