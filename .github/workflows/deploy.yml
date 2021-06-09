@@ -1,0 +1,28 @@
+name: Deploy Packages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Detect Modified Packages
+        run: |
+          echo "MODIFIED_PACKAGES=$(git diff --name-only HEAD^ HEAD | grep -oP '(?<=packages/)[^/]+')" | uniq >> $GITHUB_ENV
+
+      - name: Install
+        run: for package in $MODIFIED_PACKAGES; do (cd "packages/$package" && npm install); done
+
+      - name: Build 1
+        run: for package in $MODIFIED_PACKAGES; do (cd "packages/$package" && npm run build); done
+
+      - name: Build 2 (temp fix)
+        run: for package in $MODIFIED_PACKAGES; do (cd "packages/$package" && npm run build); done
+
+      - name: Publish
+        run: for package in $MODIFIED_PACKAGES; do (cd "packages/$package/dist" && npm publish); done
