@@ -14,6 +14,7 @@ jobs:
           fetch-depth: 2
       - uses: actions/setup-node@v2
         with:
+          node-version: '15'
           registry-url: 'https://npm.pkg.github.com'
 
       - name: Detect Modified Packages
