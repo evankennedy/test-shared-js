@@ -12,10 +12,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 2
+      - uses: actions/setup-node@v2
+        with:
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Detect Modified Packages
         run: |
-          echo "modified_packages=$(git diff --name-only HEAD^ HEAD | grep -oP '(?<=packages/)[^/]+' | uniq)" >> $GITHUB_ENV
+          echo "modified_packages=package-1 build-tools" >> $GITHUB_ENV
 
       - name: Install
         run: for package in ${{ env.modified_packages }}; do (cd "packages/$package" && npm install); done
@@ -25,6 +28,10 @@ jobs:
 
       - name: Build 2 (temp fix)
         run: for package in ${{ env.modified_packages }}; do (cd "packages/$package" && npm run build); done
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish
         run: for package in ${{ env.modified_packages }}; do (cd "packages/$package/dist" && npm publish); done
