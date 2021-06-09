@@ -1,7 +1,7 @@
 {
 	"private": "true",
 	"name": "@evankennedy/test-shared-js_build-tools",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "ISC",
 	"author": "Evan Kennedy (evan_kennedy@yahoo.com)",
 	"sideEffects": false,
