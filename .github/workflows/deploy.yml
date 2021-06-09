@@ -19,7 +19,7 @@ jobs:
 
       - name: Detect Modified Packages
         run: |
-          echo "modified_packages=$(git diff --name-only HEAD^ HEAD | grep -oP '(?<=packages/)[^/]+' | uniq)" >> $GITHUB_ENV
+          echo "modified_packages=$(git diff --name-only HEAD^ HEAD | grep -oP '(?<=packages/)[^/]+' | uniq | tr '\n' ' ')" >> $GITHUB_ENV
 
       - name: Install
         run: for package in ${{ env.modified_packages }}; do (cd "packages/$package" && npm install); done
