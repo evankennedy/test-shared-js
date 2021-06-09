@@ -3,6 +3,7 @@ name: Deploy Packages
 on:
   push:
     branches: [ master ]
+    paths: [ packages/**/* ]
 
 jobs:
   build:
